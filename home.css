@@ -12,26 +12,41 @@ header {
     margin-top: 17px;
 }
 
-.hololive-img {
+.hololive-img{
     position: fixed;
     left: 20px;
+    top: 15px;
 }
 
 .navbar{
     position: fixed;
     z-index: 1000;
+    transition: all 0.2s ease-in-out;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 30px 0 0 30px;
+}
+
+.navbar.shrink {
+    top: 20px; /* Move up slightly */
+    transform: scale(0.99); /* Make it smaller */
+    background-color: rgba(255, 255, 255, 0.616);/* Slightly opaque */
+    border-radius: 30px 0 0 30px;
+    position: fixed;
 }
 
 
 .navbar ul{
     list-style-type: none;
-    background-color: rgba(255, 255, 255, 0.288);
+    /* background-color: rgba(255, 255, 255, 0.616); */
     padding: 0px;
     margin: 0px;
     overflow: hidden;
     border-radius: 30px 0 0 30px;
     gap: 20px;
-}
+    transition: all 0.3s ease-in-out;
+    align-items: flex-end;
+}   
 
 .navbar a{
     color: hsl(204, 76%, 50%);
@@ -41,7 +56,32 @@ header {
     text-align: center;
     transition: 0.2s ease;
     font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
 }
+
+/* Shrink Links */
+.navbar.shrink a {
+    padding: 10px 15px; /* Reduce padding when shrunk */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%; /* Full width on smaller screens */
+        right: 0;
+        border-radius: 0;
+    }
+
+    .navbar ul {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navbar.shrink {
+        transform: scale(1); /* Prevent shrinking on small screens */
+    }
+}
+
 
 .navbar a:hover{
     color: hsl(204, 89%, 75%);
@@ -51,10 +91,13 @@ header {
     float: left;
 }
 
+.navbar.shrink.li{
+    float: left;
+}
+
 .navbar li.active{
     color: hsl(204, 89%, 75%);
 }
-
 
 
 .bg-vid video{
@@ -79,9 +122,12 @@ main{
     background-color: rgba(205, 228, 250, 0.39);
     padding: 0px;
     border-radius: 30px 30px 30px 30px;
-    text-align: left;
+    text-align: center;
     left: 0px;
     border-width: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    letter-spacing: 10px;
 }
 
 .section1{

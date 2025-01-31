@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #007bff;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Shrinking Effect */
+.shrink {
+    width: 80px;
+}
+
+.shrink .logo {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.shrink ul li a {
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Main Content */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    flex: 1;
+}
