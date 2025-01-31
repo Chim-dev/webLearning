@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usada Pekora</title>
+    <link rel="stylesheet" href="pekora.css">
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <div class="hololive-img">
+                <a href="https://hololive.hololivepro.com/en">
+                    <img src="assets/Hololive-2017-Logo.png" height="65">
+                </a>
+            </div>
+            <div class="title-container">
+                <h1>Talents Usada Pekora</h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="text-content">
+                    <h1>Usada Pekora</h1>
+                    <h6>兎田ぺこら</h6>
+                    <div class="description">
+                        <p class="paragraph paragraph1">
+                            “Hiya-peko! Hiya-peko! Hiya-pekooo! I'm Usada Pekora, peko!”
+                        </p>
+                        <p class="paragraph paragraph2">
+                            A lonely rabbit-eared girl who loves carrots. She loves them so much that she always brings a few wherever she goes.
+                        </p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.youtube.com/@UsadaPekora" target="_blank" class="social-button youtube">
+                            <img src="assets/youtube.png" alt="YouTube" width="24">
+                            YouTube
+                        </a>
+                        <a href="https://twitter.com/usadapekora" target="_blank" class="social-button twitter">
+                            <img src="assets/x.png" alt="Twitter" width="24">
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+                <div class="char-cards">
+                    <div id="img" class="char-content">
+                        <a>
+                            <img src="assets/pekora pic.png" height="400px" id="image">
+                        </a>
+                        <div class="button-container">
+                            <button id="next" class="cards">></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <script>
+                    const images = [
+                        "assets/usada pekora.png",
+                        "assets/usada1.png",
+                        "assets/usada2.png",
+                        "assets/usada3.png",
+                        "assets/pekora pic.png",
+                    ];
+
+                    let currentIndex = 0;
+
+                    const imageElement = document.getElementById("image");
+                    const prevButton = document.getElementById("prev");
+                    const nextButton = document.getElementById("next");
+
+                    // Function to update the image with animation
+                    function updateImage(nextIndex) {
+                        // Apply the fade-out animation
+                        imageElement.classList.remove("fade-in");
+                        imageElement.classList.add("fade-out");
+
+                        // Wait for the fade-out animation to complete
+                        setTimeout(() => {
+                            currentIndex = nextIndex;
+                            imageElement.src = images[currentIndex];
+
+                            // Apply the fade-in animation
+                            imageElement.classList.remove("fade-out");
+                            imageElement.classList.add("fade-in");
+                        }, 500); // Duration matches the CSS animation time
+                    }
+
+                    // Next button event
+                    nextButton.addEventListener("click", () => {
+                        const nextIndex = (currentIndex + 1) % images.length; // Wrap around
+                        updateImage(nextIndex);
+                    });
+
+                    // Prev button event
+                    prevButton.addEventListener("click", () => {
+                        const nextIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around
+                        updateImage(nextIndex);
+                    });
+
+                </script>
+
+            </div>
+           
+        </main>
+        <br>
+        <section class="video-section">
+            <div class="video-header">
+                <h1>Recommended Videos</h1>
+            </div>
+            <div class="slider">
+                <button class="slider-btn" id="prev-btn">&lt;</button>
+                <div class="video-cards">
+                    <div class="vid-card">
+                        <img src="assets/pekora thumbnail1.jpg" height="170">
+                        <div class="info">
+                            <span class="tags">Music</span>
+                            <p>兎田ぺこら Usada Pekora BGM (1 HOUR) [60 FPS]</p>
+                        </div>
+                    </div>
+                    <div class="vid-card">
+                        <img src="assets/pekora thumbnail2.jpg" height="170">
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>【Outlast2】この村、住人すべておかしいぺこ！【ホロライブ/兎田ぺこら】</p>
+                        </div>
+                    </div>
+                    <div class="vid-card">
+                        <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                            <img src="assets/pekora thumbnail3.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                        </div>
+                    </div>
+                    <div class="vid-card">
+                        <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                            <img src="assets/pekora thumbnail3.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                        </div>
+                    </div>
+                    <div class="vid-card">
+                        <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                            <img src="assets/pekora thumbnail3.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn" id="next-btn">&gt;</button>
+            </div>
+
+        </section>
+
+        <section class="funny-section">
+            <div class="funny-header">
+                <h1>Funny Videos Clip</h1>
+            </div>
+            <div class="slider">
+                <button class="slider-btn" id="prev-btn">&lt;</button>
+                <div class="video-cards">
+                    <div class="funny-card">
+                        <a href="https://www.youtube.com/watch?v=0fmr21ZZEhk" target="_blank">
+                            <img src="assets/pekora funny1.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>Pekora makes minecraft's strongest sword, throws it in lava for no reason</p>
+                        </div>
+                    </div>
+                    <div class="funny-card">
+                        <a href="https://www.youtube.com/watch?v=4koiI9sCG44" target="_blank">
+                            <img src="assets/pekora funny2.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>The Meeting of the Shys【Hololive AnimatedClip/Eng sub】【Pekora/Subaru/Towa/Moona/Risu/Iofifteen】</p>
+                        </div>
+                    </div>
+                    <div class="funny-card">
+                        <a href="https://www.youtube.com/watch?v=0fmr21ZZEhk" target="_blank">
+                            <img src="assets/pekora funny1.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>Pekora makes minecraft's strongest sword, throws it in lava for no reason</p>
+                        </div>
+                    </div>
+                    <div class="funny-card">
+                        <a href="https://www.youtube.com/watch?v=0fmr21ZZEhk" target="_blank">
+                            <img src="assets/pekora funny1.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>Pekora makes minecraft's strongest sword, throws it in lava for no reason</p>
+                        </div>
+                    </div>
+                    <div class="funny-card">
+                        <a href="https://www.youtube.com/watch?v=0fmr21ZZEhk" target="_blank">
+                            <img src="assets/pekora funny1.jpg" height="170">
+    
+                        </a>
+                        <div class="info">
+                            <span class="tags">Stream</span>
+                            <p>Pekora makes minecraft's strongest sword, throws it in lava for no reason</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <button class="slider-btn" id="next-btn">&gt;</button>
+            </div>
+
+        </section>
+    
+
+    
+
+        <audio autoplay loop muted id="background-music">
+            <source src="assets/兎田ぺこら Usada Pekora BGM [60 FPS].mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <script>
+            // Automatically unmute after user clicks anywhere on the page
+            const audio = document.getElementById("background-music");
+            document.body.addEventListener('click', () => {
+                if (audio.muted) {
+                    audio.muted = false;  // Unmute the audio on first click
+                }
+            });
+        </script>
+
+        <script>
+            const videoCards = document.querySelector('.video-cards');
+
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+
+                let scrollAmount = 3;
+
+                nextBtn.addEventListener('click', () => {
+                    videoCards.scrollBy({ left: 500, behavior: 'smooth' }); // Scroll right
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    videoCards.scrollBy({ left: -500, behavior: 'smooth' }); // Scroll left
+                });
+        </script>
+
+
+    </body>
+
+</html>

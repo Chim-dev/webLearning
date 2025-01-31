@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Music Page</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">🎵 Music World</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#songs">Songs</a></li>
+                <li><a href="#albums">Albums</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Feel the Rhythm of Music</h1>
+        <p>Discover your favorite songs and albums all in one place.</p>
+        <button class="cta">Explore Now</button>
+    </section>
+
+    <!-- Featured Songs Section -->
+    <section class="featured-songs" id="songs">
+        <h2>Featured Songs</h2>
+        <div class="song-cards">
+            <div class="song-card">
+                <img src="assets/yuria_miyazono_album.jpg" alt="Song 1">
+                <span class="tags">Clip</span>
+                <p class="title">Artist 1</p>
+                <button class="play-btn" data-audio="assets/[Lily+]_エルフの森-finale-(128k).m4a.mp3">Play</button>
+                <audio src="assets/song1.mp3"></audio>
+            </div>
+            <div class="song-card">
+                <img src="assets/yuria_miyazono_album.jpg" alt="Song 2">
+                <span class="tags">Clip</span>
+                <p class="title">Artist 2</p>
+                <button class="play-btn" data-audio="assets/song2.mp3">Play</button>
+                <audio src="assets/song2.mp3"></audio>
+            </div>
+            <div class="song-card">
+                <img src="assets/yuria_miyazono_album.jpg" alt="Song 3">
+                <span class="tags">Clip</span>
+                <p class="title">Artist 3</p>
+                <button class="play-btn" data-audio="assets/song3.mp3">Play</button>
+                <audio src="assets/song3.mp3"></audio>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Albums Section -->
+    <section class="albums" id="albums">
+        <h2>Popular Albums</h2>
+        <div class="album-cards">
+            <div class="album-card">
+                <img src="album1.jpg" alt="Album 1">
+                <p class="album-title">Album Title 1</p>
+            </div>
+            <div class="album-card">
+                <img src="album2.jpg" alt="Album 2">
+                <p class="album-title">Album Title 2</p>
+            </div>
+            <div class="album-card">
+                <img src="album3.jpg" alt="Album 3">
+                <p class="album-title">Album Title 3</p>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".play-btn");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const audio = this.nextElementSibling;
+
+            // Pause any currently playing audio
+            const allAudios = document.querySelectorAll("audio");
+            allAudios.forEach((a) => {
+                if (a !== audio) {
+                    a.pause();
+                    a.currentTime = 0;
+                }
+            });
+
+            // Play or pause the current audio
+            if (audio.paused) {
+                audio.play();
+                this.textContent = "Pause";
+            } else {
+                audio.pause();
+                this.textContent = "Play";
+            }
+
+            // Reset button text when audio ends
+            audio.addEventListener("ended", () => {
+                this.textContent = "Play";
+            });
+        });
+    });
+});
+
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Music World. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.video-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.video-cards {
+    display: flex;
+    overflow: hidden; /* Hide extra cards */
+    width: calc(100% - 80px); /* Adjust width for buttons */
+}
+
+.vid-card {
+    flex: 0 0 250px; /* Fixed width for each card */
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.slider-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn:hover {
+    background-color: #0056b3;
+}

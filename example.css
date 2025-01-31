@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff4081;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #ff4081, #7c4dff);
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero .cta {
+    background-color: #fff;
+    color: #ff4081;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta:hover {
+    background-color: #ffcccc;
+}
+
+/* Featured Songs */
+.featured-songs {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.featured-songs h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.song-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling the play button */
+.play-btn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #ff6b9d;
+}
+
+/* Add some spacing around the song card */
+.song-card {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.song-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.1s ease;
+}
+
+.song-card img:hover{
+    transform: scale(1.1);
+}
+
+.song-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.song-card .artist {
+    color: #777;
+    margin: 0 10px 10px;
+}
+
+/* Albums Section */
+.albums {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.albums h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.album-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.album-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.album-card .album-title {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .song-card,
+    .album-card {
+        width: 90%;
+    }
+}

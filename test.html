@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="video-slider">
+        <button class="slider-btn" id="prev-btn">&lt;</button>
+        <div class="video-cards">
+            <div class="vid-card">
+                <img src="assets/pekora thumbnail1.jpg" height="170">
+                <div class="info">
+                    <span class="tags">Music</span>
+                    <p>兎田ぺこら Usada Pekora BGM (1 HOUR) [60 FPS]</p>
+                </div>
+            </div>
+            <div class="vid-card">
+                <img src="assets/pekora thumbnail2.jpg" height="170">
+                <div class="info">
+                    <span class="tags">Stream</span>
+                    <p>【Outlast2】この村、住人すべておかしいぺこ！【ホロライブ/兎田ぺこら】</p>
+                </div>
+            </div>
+            <div class="vid-card">
+                <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                    <img src="assets/pekora thumbnail3.jpg" height="170">
+                </a>
+                <div class="info">
+                    <span class="tags">Stream</span>
+                    <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                </div>
+            </div>
+            <!-- Add more vid-cards here -->
+            <div class="vid-card">
+                <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                    <img src="assets/pekora thumbnail3.jpg" height="170">
+
+                </a>
+                <div class="info">
+                    <span class="tags">Stream</span>
+                    <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                </div>
+            </div>
+            <div class="vid-card">
+                <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                    <img src="assets/pekora thumbnail3.jpg" height="170">
+
+                </a>
+                <div class="info">
+                    <span class="tags">Stream</span>
+                    <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                </div>
+            </div>
+            <div class="vid-card">
+                <a href="https://www.youtube.com/watch?v=fwKanFKJZTg" target="_blank">
+                    <img src="assets/pekora thumbnail3.jpg" height="170">
+
+                </a>
+                <div class="info">
+                    <span class="tags">Stream</span>
+                    <p>【#holoGTA】みんなでホロGTA切り抜き鑑賞会！ぺこ！【ホロライブ/兎田ぺこら】</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn" id="next-btn">&gt;</button>
+    </div>
+    
+    <script>
+        // Select elements
+        const videoCards = document.querySelector('.video-cards');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+let scrollAmount = 3;
+
+nextBtn.addEventListener('click', () => {
+    videoCards.scrollBy({ left: 500, behavior: 'smooth' }); // Scroll right
+});
+
+prevBtn.addEventListener('click', () => {
+    videoCards.scrollBy({ left: -500, behavior: 'smooth' }); // Scroll left
+});
+
+
+    </script>
+    
+    
+</body>
+</html>

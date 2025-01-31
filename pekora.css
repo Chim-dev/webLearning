@@ -1,0 +1,390 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(253, 252, 251); /* Fallback background color */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Ensures it covers the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/pekora\ pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 20px;
+    background-attachment: fixed;
+    opacity: 0.1; /* Adjust this value for desired visibility */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+header {
+    display: flex;
+    color: white;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between; /* Centers the content in the header */
+}
+
+.hololive-img {
+    position:relative; /* Remove from the flex flow */
+    left: 20px; /* Align the logo to the left */
+}
+
+.title-container {
+    display: flex; /* Use flexbox to align content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-grow: 1; /* Allow the title-container to grow and take up remaining space */
+    color: rgb(43, 80, 180);
+    height: 100%; /* Ensure the height is set for vertical centering to work */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.char-cards {
+    flex: 1; /* Allow char-cards to take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside char-cards */
+    text-align: center; /* Center-align text inside char-cards */
+}
+
+.char-cards img {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;
+}
+
+
+.container {
+    display: flex; /* Use flexbox to position elements side by side */
+    justify-content: space-between; /* Space between the two sections */
+    align-items: flex-start; /* Align items to the top */
+    gap: 10px; /* Add space between elements */
+    padding: 20px; /* Optional padding around the container */
+}
+
+
+.button-container {
+    margin-top: 10px; /* Add spacing between the image and buttons */
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center the buttons */
+}
+
+button.cards {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    pointer-events: auto; /* Allows button clicks inside pointer-events: none container */
+    transition: all 0.3s ease;
+}
+
+button.cards:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+
+#next {
+    left: 100px;
+}
+
+h2, h5 {
+    margin: 10px 0;
+}
+
+/* Add animation styles */
+.fade-out {
+    animation: fadeOut 0.7s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.7s forwards;
+}
+
+/* Keyframes for fade-out and fade-in animations */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.description {
+    margin-top: 0px;
+}
+
+.paragraph1 {
+    font-size: 24px;
+    color: rgb(1, 25, 78);
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.paragraph2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 99, 129);
+}
+
+.char-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between image and text */
+}
+
+/* Style for the text content */
+.text-content {
+    margin-top: 40px;
+    font-size: 15px;
+    color: rgb(115, 218, 250);
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: flex-start; /* Align text at the top */
+    max-width: 60%; /* Prevent text from stretching too wide */
+    left: 200px;
+}
+
+.text-content h1 {
+    margin: 0;
+    font-size: 40px;
+    color: rgb(115, 218, 250);
+}
+
+.social {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-button img {
+    margin-right: 5px;
+}
+
+.social-button:hover {
+    background-color: #e1e1e1;
+    transform: scale(1.05);
+}
+
+.social-button.youtube {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.social-button.twitter {
+    color: #1da1f2;
+    border-color: #1da1f2;
+}
+
+#tittle{
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 100;
+    color: rgb(1, 25, 78);
+}
+
+.background-videos{
+    background-image: url(assets/polkadot.png);
+
+}
+
+.video-section {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #9de0ff;
+}
+
+.video-header h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #015779;
+    text-transform: uppercase;
+    font-stretch: semi-expanded;
+}
+
+.video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+.video-cards {
+    display: flex;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    width: calc(100% - 80px);
+}
+
+.vid-card {
+    flex: 0 0 250px; /* Fixed width for each card */
+    margin: 0 8px;
+    transition: transform 0.2s ease;
+    background-color: #ddd;
+    border-radius: 15px;
+}
+
+.vid-card:hover{
+    transform: translateY(-2px);
+
+}
+
+.vid-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
+.vid-card img:hover {
+    transform: scale(1.1);
+}
+
+.info {
+    padding: 15px;
+    text-align: left;
+}
+
+.tags {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.info p{
+    margin: 0;
+    font-weight: bold;
+    color: #333;    
+    font-size: 15px;
+}
+
+.funny-section{
+    background-color: yellow;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.funny-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.funny-header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #015779;
+    text-transform: uppercase;
+    font-stretch: semi-expanded;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.slider-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn:hover {
+    background-color: #0056b3;
+}
+
+.funny-card{
+    flex: 0 0 250px; /* Fixed width for each card */
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+    background-color: #ddd;
+    border-radius: 15px;
+}
+
+.funny-card img{
+    width: 100%;
+    height: 200px;
+    display: block;
+    transition: transform 0.2s ease;
+    border-radius: 15px;    
+}
+
+.funny-card img:hover{
+    transform: scale(1.1);
+}

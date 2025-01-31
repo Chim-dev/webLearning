@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(253, 252, 251);
+
+}
+
+header {
+    display: flex;
+    color: white;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center; /* Centers the content in the header */
+}
+
+.hololive-img {
+    position: absolute; /* Remove from the flex flow */
+    left: 20px; /* Align the logo to the left */
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* This allows the title container to take the remaining space */
+    color: rgb(21, 55, 148);
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color:rgb(39, 29, 133)
+}
+
+.character-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.char-cards {
+    background: rgb(214, 249, 250);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(243, 239, 239, 0.1);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.char-cards img {
+    border-radius: 8px;
+    width: 100%;
+    max-height: 350px; /* Set a maximum height */
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+    margin-bottom: 10px; /* Adds spacing below the image */
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+
+.char-cards img:hover {
+    transform: scale(1.115);
+}
+
+
+

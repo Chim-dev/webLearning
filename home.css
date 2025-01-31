@@ -1,0 +1,208 @@
+body {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    height: 100vh; /* Full viewport height for the video section */
+    color: aliceblue;
+    display: flex;
+    padding: 20px 0;
+    justify-content: right;
+    margin-top: 17px;
+}
+
+.hololive-img {
+    position: fixed;
+    left: 20px;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 1000;
+}
+
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.288);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    border-radius: 30px 0 0 30px;
+    gap: 20px;
+}
+
+.navbar a{
+    color: hsl(204, 76%, 50%);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    transition: 0.2s ease;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.navbar a:hover{
+    color: hsl(204, 89%, 75%);
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar li.active{
+    color: hsl(204, 89%, 75%);
+}
+
+
+
+.bg-vid video{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main{
+    margin-top: 10px;
+}
+
+.section1-h1 {
+    font-size: 2rem;
+    color: hsl(206, 100%, 51%);
+    margin-bottom: 20px;
+    background-color: rgba(205, 228, 250, 0.39);
+    padding: 0px;
+    border-radius: 30px 30px 30px 30px;
+    text-align: left;
+    left: 0px;
+    border-width: 30px;
+}
+
+.section1{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background:linear-gradient(to right,#c3ff36, #9fe1f5);
+    border-radius: 30px;
+}
+
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for video cards */
+.section1-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+    padding: 20px;
+}
+
+/* Individual video card */
+.vid-card {
+    background-color: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    width: 320px; /* Fixed width for cards */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for card */
+.vid-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Thumbnail image */
+.thumbnail {
+    width: 100%; /* Full width of the card */
+    height: 220px; /* Fixed height for thumbnail */
+    object-fit:contain; /* Maintain aspect ratio, crop if necessary */
+    transition: 0.2s ease;
+    border-radius: 20px ;
+}
+
+.thumbnail:hover{
+    transform: scale(1.1);
+}
+
+/* Info section */
+.info {
+    padding: 12px; /* Padding for text content */
+    text-align: left; /* Align text to the left */
+}
+
+/* Tags */
+.tags {
+    display: inline-block; /* Inline block for tag */
+    background-color: hsl(204, 76%, 50%); /* Blue background */
+    color: #fff; /* White text */
+    font-size: 12px; /* Smaller text size */
+    padding: 2px 8px; /* Padding inside the tag */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 8px; /* Space below the tag */
+}
+
+/* Title */
+.title {
+    font-size: 15px; /* Adjust font size for title */
+    font-weight: bold;
+    color: #333; /* Dark gray color for text */
+    margin: 0; /* Reset margin */
+    line-height: 1.4; /* Slightly increased line height for readability */
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.section-music{
+    background: linear-gradient(to left, wheat, rgb(252, 252, 147));
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.song-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.song-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 250px;
+    text-align: left;
+}
+
+.song-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.1s ease;
+}
+
+.song-card img:hover{
+    transform: scale(1.1);
+}
+
+.song-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.song-card .artist {
+    color: #777;
+    margin: 0 10px 10px;
+}   
