@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f3e8ee] text-gray-800">
+    
+    <!-- Navbar -->
+    <nav class="bg-[#b66d8e] text-white p-4 fixed w-full top-0 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">My Diary</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#entries" class="hover:text-gray-300">Entries</a></li>
+                <li><a href="#write" class="hover:text-gray-300">Write</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h2 class="text-4xl font-bold">Capture Your Thoughts</h2>
+        <p class="text-lg mt-4 max-w-lg">Write down your feelings, memories, and moments that matter.</p>
+        <a href="#write" class="mt-6 px-6 py-3 bg-[#b66d8e] text-white rounded-md hover:bg-[#dc80a1] transition">Start Writing</a>
+    </section>
+    
+    <!-- Write Diary Section -->
+    <section id="write" class="py-12 px-6 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Write Your Diary</h2>
+            <textarea id="diaryText" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#b66d8e]" rows="5" placeholder="Write your thoughts here..."></textarea>
+            <button onclick="saveEntry()" class="mt-4 px-6 py-2 bg-[#b66d8e] text-white rounded-md hover:bg-[#dc80a1] transition">Save</button>
+        </div>
+    </section>
+    
+    <!-- Diary Entries Section -->
+    <section id="entries" class="py-12 px-6">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Diary Entries</h2>
+            <div id="diaryEntries" class="space-y-4">
+                <p class="text-gray-500">No entries yet.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-[#b66d8e] text-white">
+        <p>&copy; 2025 My Diary | All Rights Reserved</p>
+    </footer>
+    
+    <script>
+        function saveEntry() {
+            let text = document.getElementById("diaryText").value;
+            if (text.trim() !== "") {
+                let entryDiv = document.createElement("div");
+                entryDiv.classList = "p-4 bg-gray-100 rounded-md shadow";
+                entryDiv.innerHTML = `<p>${text}</p><p class='text-sm text-gray-500 mt-2'>${new Date().toLocaleString()}</p>`;
+                document.getElementById("diaryEntries").prepend(entryDiv);
+                document.getElementById("diaryText").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
